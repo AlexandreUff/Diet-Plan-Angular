@@ -36,6 +36,8 @@
     align-items: center;
     justify-content: space-evenly;
 
+    padding: 20px 0px;
+
     background-color: var(--secondColor);
     font-family: "Roboto Condensed", sans-serif;
     color: var(--firstColor);
@@ -49,15 +51,37 @@
 
       li {
         margin: 0 10px;
-
-        svg {
-          fill: blue;
-        }
       }
     }
   }
 }
 
+@media(max-width: 1115px){
+  :host {
+    header {
+      h1 {
+        font-size: 7rem;
+      }
+    }
+  }
+}
 
+@media(max-width: 1020px){
+  :host {
+    footer {
+      flex-direction: column;
+      justify-content: center;
 
+    }
+  }
+}
 
+@media(max-width: 620px){
+  :host {
+    header {
+      h1 {
+        font-size: 4rem;
+      }
+    }
+  }
+}
