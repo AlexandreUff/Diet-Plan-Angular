@@ -1,0 +1,21 @@
+:host {
+  margin-right: 10px;
+
+  svg {
+    width: 180px;
+    height: 180px;
+    fill: #baffb4;
+    animation: beat 1s infinite /* fill-mode */;
+  }
+}
+
+@keyframes beat {
+  0% {
+    scale: (0.8);
+  }
+
+  100% {
+    scale: (1);
+    opacity: .8;
+  }
+}

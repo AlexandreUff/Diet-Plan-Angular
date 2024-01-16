@@ -329,8 +329,8 @@
 
 <header>
 
-  <span [innerHTML]="logo"></span>
-
+  <!-- <span [innerHTML]="logo"></span> -->
+  <app-logo-icon></app-logo-icon>
   <h1>Diet Plan</h1>
 
 </header>
@@ -338,6 +338,22 @@
   <router-outlet></router-outlet>
 </main>
 <footer>
-  <p>CHÃO</p>
+  <ul>
+    <li>
+      <span [innerHTML]="linkedin"></span>
+    </li>
+    <li>
+      <span [innerHTML]="github"></span>
+    </li>
+    <li>
+      <span [innerHTML]="instagram"></span>
+    </li>
+  </ul>
+  <p>
+    <small>Créditos Imagens: "Jão"</small>
+  </p>
+  <p>
+    <small>© 2024 - Alexandre Magno Dias</small>
+  </p>
 </footer>
 

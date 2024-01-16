@@ -4,11 +4,12 @@ import { RouterOutlet } from '@angular/router';
 import { IcoContentComponent } from './component/ico-content/ico-content.component';
 import Icons from '../assets/icons';
 import { DomSanitizer } from '@angular/platform-browser';
+import { LogoIconComponent } from './component/logo-icon/logo-icon.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, IcoContentComponent],
+  imports: [CommonModule, RouterOutlet, IcoContentComponent, LogoIconComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   /* styles: `
