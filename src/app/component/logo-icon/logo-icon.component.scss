@@ -28,6 +28,12 @@
   }
 }
 
+@media(max-width: 400px){
+  :host {
+    margin-right: 5px;
+  }
+}
+
 //Keyframes
 @keyframes beat {
   0% {
