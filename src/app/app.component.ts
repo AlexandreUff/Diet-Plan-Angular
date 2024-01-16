@@ -28,4 +28,7 @@ export class AppComponent {
 
   title = 'diet-plan';
   logo = this.sanitizer.bypassSecurityTrustHtml(Icons.logo('width="55px" height="55px" fill="#baffb4"'))
+  linkedin = this.sanitizer.bypassSecurityTrustHtml(Icons.linkedin('width="30px" height="30px" fill="#baffb4"'))
+  github = this.sanitizer.bypassSecurityTrustHtml(Icons.github('width="30px" height="30px" fill="#baffb4"'))
+  instagram = this.sanitizer.bypassSecurityTrustHtml(Icons.instagram('width="30px" height="30px" fill="#baffb4"'))
 }
