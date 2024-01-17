@@ -5,11 +5,16 @@ import { IcoContentComponent } from './component/ico-content/ico-content.compone
 import Icons from '../assets/icons';
 import { DomSanitizer } from '@angular/platform-browser';
 import { LogoIconComponent } from './component/logo-icon/logo-icon.component';
+import { CarouselInputComponent } from './component/carousel-input/carousel-input.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, IcoContentComponent, LogoIconComponent],
+  imports: [CommonModule,
+            RouterOutlet,
+            IcoContentComponent,
+            LogoIconComponent,
+          ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   /* styles: `

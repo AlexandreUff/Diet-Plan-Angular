@@ -27,6 +27,10 @@
   }
 
   main {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
     flex-grow: 1;
     color: red;
     background-image: linear-gradient(hsla(0,0%,100%,0),#000);
