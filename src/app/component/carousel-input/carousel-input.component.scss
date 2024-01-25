@@ -3,11 +3,23 @@
     width: 600px;
     height: 200px;
     margin: 5px 0px;
+    padding: 0px 15px;
 
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
     border-radius: 10px;
     box-shadow: 4px 4px 10px rgba(0,0,0,.464);
+
+    font-family: 'Inter', sans-serif;
+    color: var(--thirdColor);
+
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+
+    h2 {
+      text-align: center;
+    }
   }
 }
 
