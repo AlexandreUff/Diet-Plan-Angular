@@ -27,8 +27,6 @@
       height: 80%;
       width: 200%;
 
-      border-bottom: 1px solid white;
-
       transition: 1s;
 
       .card {
@@ -46,6 +44,7 @@
 
     .panel {
       height: 20%;
+      border-top: 1px solid white;
 
       button {
         width: 50%;
