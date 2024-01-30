@@ -18,10 +18,18 @@
   </div>
 
   <div class="panel">
-    <button title="Voltar" (click)="changeRailPosition(false)">
+    <button
+      title="Voltar"
+      (click)="changeRailPosition(false)"
+      [style.width.%]="railPosition < 0 ? 50 : 0"
+    >
       << VOLTAR
     </button>
-    <button title="Avançar" (click)="changeRailPosition(true)">
+    <button
+      title="Avançar"
+      (click)="changeRailPosition(true)"
+      [style.width.%]="railPosition < 0 ? 50 : 100"
+    >
       AVANÇAR >>
     </button>
   </div>

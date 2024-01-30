@@ -43,11 +43,13 @@
     }
 
     .panel {
+      display: flex;
       height: 20%;
       border-top: 1px solid white;
 
       button {
-        width: 50%;
+        overflow: hidden;
+        /* width: 50%; */
         height: 100%;
 
         background-color: transparent;
