@@ -45,7 +45,7 @@
     .panel {
       display: flex;
       height: 20%;
-      border-top: 1px solid white;
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
 
       button {
         overflow: hidden;
@@ -55,7 +55,7 @@
         background-color: transparent;
         font-family: 'Inter', sans-serif;
         border: none;
-        border-left: 1px solid white;
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
 
         color: white;
         font-weight: 800;
@@ -73,6 +73,7 @@
 
     h2 {
       text-align: center;
+      margin-bottom: 10px;
     }
   }
 }
