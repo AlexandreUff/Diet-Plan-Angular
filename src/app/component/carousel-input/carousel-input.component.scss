@@ -23,7 +23,6 @@
 
       position: relative;
       left: 0px;
-      /* background-color: red; */
       height: 80%;
       width: 200%;
 
@@ -33,12 +32,36 @@
         box-sizing: border-box;
         width: 50%;
         height: 100%;
-        padding: 0px 15px;
+        padding-top: 15px;
 
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
+        .input-content{
+          width: 100%;
+          flex-grow: 1;
+
+          border-top: 1px solid rgba(255, 255, 255, 0.5);
+
+          label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 1rem;
+            width: 100%;
+            height: 100%;
+
+            input {
+              width: 80%;
+              font-size: 1.4rem;
+              margin-right: 10px;
+            }
+          }
+
+        }
       }
     }
 
@@ -49,10 +72,9 @@
 
       button {
         overflow: hidden;
-        /* width: 50%; */
         height: 100%;
 
-        background-color: transparent;
+        background-color: rgba(255, 255, 255, 0.2);
         font-family: 'Inter', sans-serif;
         border: none;
         border-left: 1px solid rgba(255, 255, 255, 0.5);
@@ -60,7 +82,7 @@
         color: white;
         font-weight: 800;
 
-        transition: .3s;
+        transition: .5s;
 
         &:hover {
           background-color: white;
@@ -74,6 +96,10 @@
     h2 {
       text-align: center;
       margin-bottom: 10px;
+    }
+
+    h3 {
+      padding: 0px 15px;
     }
   }
 }
