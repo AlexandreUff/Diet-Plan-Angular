@@ -12,8 +12,8 @@ export class CarouselInputComponent {
   valor = 5
   public railPosition: number = 0
 
-  public changeRailPosition = () => {
-    this.railPosition--
+  public changeRailPosition = (advance: boolean) => {
+    advance ? this.railPosition-- : this.railPosition++
     console.log("Posicionista:", this.railPosition)
   }
 

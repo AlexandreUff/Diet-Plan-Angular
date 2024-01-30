@@ -18,10 +18,10 @@
   </div>
 
   <div class="panel">
-    <button title="Voltar">
+    <button title="Voltar" (click)="changeRailPosition(false)">
       << VOLTAR
     </button>
-    <button title="Avançar" (click)="changeRailPosition()">
+    <button title="Avançar" (click)="changeRailPosition(true)">
       AVANÇAR >>
     </button>
   </div>
