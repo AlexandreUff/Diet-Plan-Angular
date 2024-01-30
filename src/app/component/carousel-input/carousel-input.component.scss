@@ -19,9 +19,17 @@
     letter-spacing: 5px;
 
     .rail {
-      background-color: red;
-      height: 100%;
+      display: flex;
+
+      position: relative;
+      left: -100%;
+      /* background-color: red; */
+      height: 80%;
       width: 200%;
+
+      border-bottom: 1px solid white;
+
+      transition: 1s;
 
       .card {
         box-sizing: border-box;
@@ -33,6 +41,32 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+      }
+    }
+
+    .panel {
+      height: 20%;
+
+      button {
+        width: 50%;
+        height: 100%;
+
+        background-color: transparent;
+        font-family: 'Inter', sans-serif;
+        border: none;
+        border-left: 1px solid white;
+
+        color: white;
+        font-weight: 800;
+
+        transition: .3s;
+
+        &:hover {
+          background-color: white;
+          color: black;
+          cursor: pointer;
+          font-size: 1rem;
+        }
       }
     }
 
