@@ -104,8 +104,8 @@
     <div class="card">
       <h2>Conclusão</h2>
       <div class="input-content">
-        <p>Estando tudo corretamente preenchido, clique em "concluir".</p>
-        <button>Concruí</button>
+        <p>Estando tudo corretamente preenchido, clique agora em "Concluído".</p>
+        <button title="Concluído">✓ CONCLUÍDO</button>
       </div>
     </div>
 
@@ -115,14 +115,14 @@
     <button
       title="Voltar"
       (click)="changeRailPosition(false)"
-      [style.width.%]="railPosition < 0 ? 50 : 0"
+      [style.width.%]="railPosition < 0 ? (railPosition < -6 ? 100 : 50) : 0"
     >
       << VOLTAR
     </button>
     <button
       title="Avançar"
       (click)="changeRailPosition(true)"
-      [style.width.%]="railPosition < 0 ? 50 : 100"
+      [style.width.%]="railPosition < 0 ? (railPosition < -6 ? 0 : 50) : 100"
     >
       AVANÇAR >>
     </button>

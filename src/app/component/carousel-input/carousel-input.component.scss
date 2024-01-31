@@ -40,10 +40,43 @@
         flex-direction: column;
 
         .input-content{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
           width: 100%;
           flex-grow: 1;
 
           border-top: 1px solid rgba(255, 255, 255, 0.5);
+
+          p {
+            margin-bottom: 7px;
+            padding: 0 15px;
+            font-size: 0.8rem;
+          }
+
+          button {
+            border: none;
+            border-radius: 5px;
+
+            background-color: rgba(255, 255, 255, 0.5);
+            font-family: 'Inter', sans-serif;
+            font-weight: bolder;
+            color: white;
+            font-size: 1.2rem;
+
+            width: 170px;
+            height: 40px;
+
+            transition: .3s;
+
+            &:hover {
+              background-color: white;
+              color: black;
+              transform: scale(1.1);
+              cursor: pointer;
+            }
+          }
 
           label {
             display: flex;
