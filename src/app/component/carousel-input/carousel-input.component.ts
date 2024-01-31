@@ -9,7 +9,6 @@ import { Component } from '@angular/core';
   styleUrl: './carousel-input.component.scss'
 })
 export class CarouselInputComponent {
-  valor = 5
   public railPosition: number = 0
 
   public changeRailPosition = (advance: boolean) => {
