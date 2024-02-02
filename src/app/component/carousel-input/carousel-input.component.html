@@ -83,16 +83,23 @@
     </div>
 
     <div class="card">
-      <h2>Marque a opção que corresponda ao seu sexo</h2>
+      <h2>Selecione seu sexo</h2>
       <div class="input-content">
-        <label>
+        <label class="no-width">
           <input
-            type="text"
-            placeholder="Ex.: 75.5 kg"
-            title="Digite aqui seu peso em quilogramas."
+            type="radio"
+            title="Sexo masculino."
+            name="sex"
             [disabled]="!(railPosition*-1 === 5)"
-            id="5"
-          > Kg
+          > Masculino
+        </label>
+        <label class="no-width">
+          <input
+            type="radio"
+            title="Sexo feminino."
+            name="sex"
+            [disabled]="!(railPosition*-1 === 5)"
+          > Feminino
         </label>
       </div>
     </div>
@@ -100,14 +107,21 @@
     <div class="card">
       <h2>Por fim, o seu objetivo:</h2>
       <div class="input-content">
-        <label>
+        <label class="no-width">
           <input
-            type="text"
-            placeholder="Ex.: 75.5 kg"
-            title="Digite aqui seu peso em quilogramas."
+            type="radio"
+            title="Hipertrofia."
+            name="objective"
             [disabled]="!(railPosition*-1 === 6)"
-            id="6"
-          > Kg
+          > Hipertrofia
+        </label>
+        <label class="no-width">
+          <input
+            type="radio"
+            title="Emagrecimento."
+            name="objective"
+            [disabled]="!(railPosition*-1 === 6)"
+          > Emagrecimento
         </label>
       </div>
     </div>
