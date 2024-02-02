@@ -13,8 +13,12 @@ export class CarouselInputComponent {
 
   public changeRailPosition = (advance: boolean) => {
     const newValue = advance ? this.railPosition - 1 : this.railPosition + 1
-    if(newValue <= 0 && newValue > -8) this.railPosition = newValue
+    if(newValue <= 0 && newValue > -9) this.railPosition = newValue
     console.log("Posicionista:", this.railPosition)
+  }
+
+  public test = () => {
+    console.log("FOIS")
   }
 
 }

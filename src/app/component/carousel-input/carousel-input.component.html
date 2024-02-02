@@ -105,7 +105,13 @@
       <h2>Conclusão</h2>
       <div class="input-content">
         <p>Estando tudo corretamente preenchido, clique agora em "Concluído".</p>
-        <button title="Concluído">✓ CONCLUÍDO</button>
+        <button
+          title="Concluído"
+          [disabled]="!(railPosition*-1 === 7)"
+          (click)="test()"
+        >
+          ✓ CONCLUÍDO
+        </button>
       </div>
     </div>
 
