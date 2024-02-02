@@ -60,13 +60,24 @@
       <h2>Selecione o seu nível de atividade</h2>
       <div class="input-content">
         <label>
-          <input
+          <!-- <input
             type="text"
             placeholder="Ex.: 75.5 kg"
             title="Digite aqui seu peso em quilogramas."
             [disabled]="!(railPosition*-1 === 4)"
             id="4"
-          > Kg
+          > Kg -->
+          <select
+            class="inputStyled"
+            title="Escolha a opção que representa sua atividade semanal"
+            [disabled]="!(railPosition*-1 === 4)"
+          >
+            <option value="1">Sedentário (Nenhum ou pouco exercício)</option>
+            <option value="2">Levemente ativo (1 a 3 dias de exercício por semana)</option>
+            <option value="3">Moderadamente ativo (3 a 5 dias de exercício por semana)</option>
+            <option value="4">Altamente ativo (exercício pesado de 5 a 6 dias por semana)</option>
+            <option value="5">Extremamente ativo (exercício pesado diariamente e até 2 vezes por dia)</option>
+          </select>
         </label>
       </div>
     </div>
