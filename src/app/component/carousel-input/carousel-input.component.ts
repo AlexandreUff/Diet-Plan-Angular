@@ -8,7 +8,7 @@ interface userDataType {
   age: number,
   activity: number,
   sex: "male" | "female",
-  objective: "hypertrophy" | "loseweight"
+  goal: "hypertrophy" | "loseweight"
 }
 
 @Component({
@@ -27,7 +27,7 @@ export class CarouselInputComponent {
     age: 0,
     activity: 0,
     sex: "male",
-    objective: "hypertrophy"
+    goal: "hypertrophy"
   }
 
   public changeRailPosition = (advance: boolean) => {
