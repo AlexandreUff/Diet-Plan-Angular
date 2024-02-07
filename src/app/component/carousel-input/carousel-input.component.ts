@@ -37,7 +37,7 @@ export class CarouselInputComponent {
   }
 
   public test = () => {
-    console.log("FOIS!")
+    console.log("FOIS")
   }
 
 }
