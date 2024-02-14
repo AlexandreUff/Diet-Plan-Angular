@@ -35,7 +35,7 @@ export class CarouselInputComponent {
     if(newValue <= 0 && newValue > -9) this.railPosition = newValue
     console.log("Posicionista:", this.railPosition)
 
-    console.log(this.userData.activity)
+    console.log(this.userData.sex)
   }
 
   public test = () => {
