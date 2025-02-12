@@ -166,6 +166,7 @@
       title="Avançar"
       (click)="changeRailPosition(true)"
       [style.width.%]="railPosition < 0 ? (railPosition < -6 ? 0 : 50) : 100"
+      [disabled]="railPosition < -6"
     >
       AVANÇAR >>
     </button>
