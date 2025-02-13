@@ -105,26 +105,8 @@ const Slimming = (data: UserDataType) => {
   };
 };
 
-export default function Result({
-  weight,
-  height,
-  age,
-  activity,
-  sex,
-  goal,
-}: UserDataType) {
-  const userDataHandled = {
-    weight: +weight,
-    height: +height,
-    age: +age,
-    activity,
-    sex,
-    goal,
-  };
-
-  console.log('userDataHandled', userDataHandled);
-
-  return goal === UserDataGoal.HYPERTROPHY
-    ? Hipertrophy(userDataHandled)
-    : Slimming(userDataHandled);
+export default function Result(userData: UserDataType) {
+  return userData.goal === UserDataGoal.HYPERTROPHY
+    ? Hipertrophy(userData)
+    : Slimming(userData);
 }
