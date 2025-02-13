@@ -79,11 +79,11 @@
             [disabled]="!(railPosition*-1 === 4)"
             [(ngModel)]="userData.activity"
           >
-            <option value="1">Sedentário (Nenhum ou pouco exercício)</option>
-            <option value="2">Levemente ativo (1 a 3 dias de exercício por semana)</option>
-            <option value="3">Moderadamente ativo (3 a 5 dias de exercício por semana)</option>
-            <option value="4">Altamente ativo (exercício pesado de 5 a 6 dias por semana)</option>
-            <option value="5">Extremamente ativo (exercício pesado diariamente e até 2 vezes por dia)</option>
+            <option [ngValue]="UserDataActivity.SEDENTARY">Sedentário (Nenhum ou pouco exercício)</option>
+            <option [ngValue]="UserDataActivity.SLIGHTLY">Levemente ativo (1 a 3 dias de exercício por semana)</option>
+            <option [ngValue]="UserDataActivity.MODERATELY">Moderadamente ativo (3 a 5 dias de exercício por semana)</option>
+            <option [ngValue]="UserDataActivity.HIGHLY">Altamente ativo (exercício pesado de 5 a 6 dias por semana)</option>
+            <option [ngValue]="UserDataActivity.EXTREMELY">Extremamente ativo (exercício pesado diariamente e até 2 vezes por dia)</option>
           </select>
         </label>
       </div>

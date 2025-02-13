@@ -1,7 +1,13 @@
 import { CommonModule, NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { UserDataGoal, UserDataSex, UserDataType } from '../../types/UserData';
+import {
+  UserDataActivity,
+  UserDataGoal,
+  UserDataSex,
+  UserDataType,
+} from '../../types/UserData';
+import Result from '../../services/result';
 
 @Component({
   selector: 'app-carousel-input',
@@ -11,6 +17,8 @@ import { UserDataGoal, UserDataSex, UserDataType } from '../../types/UserData';
   styleUrl: './carousel-input.component.scss',
 })
 export class CarouselInputComponent {
+  public UserDataActivity = UserDataActivity;
+
   public railPosition: number = 0;
 
   public userData: UserDataType = {
@@ -34,7 +42,7 @@ export class CarouselInputComponent {
   };
 
   public done = () => {
-    console.log('FOIS 2!', this.userData);
+    console.log('userData: ', this.userData);
 
     const fieldsMissing: string[] = [];
 
@@ -52,6 +60,10 @@ export class CarouselInputComponent {
           this.errorMessage += ` ${field},`;
         }
       });
+
+      return;
     }
+
+    console.log(Result(this.userData));
   };
 }
