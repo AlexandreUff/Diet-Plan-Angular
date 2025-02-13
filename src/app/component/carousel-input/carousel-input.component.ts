@@ -2,13 +2,21 @@ import { CommonModule, NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-interface userDataType {
-  weight?: number,
-  height?: number,
-  age?: number,
-  activity?: number,
-  sex?: "male" | "female",
-  goal?: "hypertrophy" | "loseweight"
+enum Activity {
+  SEDENTARY = 1,
+  SLIGHTLY = 2,
+  MODERATELY = 3,
+  HIGHLY = 4,
+  EXTREMELY = 5,
+}
+
+interface UserDataType {
+  weight?: number;
+  height?: number;
+  age?: number;
+  activity?: Activity;
+  sex?: 'male' | 'female';
+  goal?: 'hypertrophy' | 'loseweight';
 }
 
 @Component({
@@ -16,30 +24,29 @@ interface userDataType {
   standalone: true,
   imports: [NgStyle, FormsModule, CommonModule],
   templateUrl: './carousel-input.component.html',
-  styleUrl: './carousel-input.component.scss'
+  styleUrl: './carousel-input.component.scss',
 })
 export class CarouselInputComponent {
-  public railPosition: number = 0
+  public railPosition: number = 0;
 
-  public userData: userDataType = {
+  public userData: UserDataType = {
     weight: undefined,
     height: undefined,
     age: undefined,
     activity: 1,
-    sex: "male",
-    goal: "hypertrophy"
-  }
+    sex: 'male',
+    goal: 'hypertrophy',
+  };
 
   public changeRailPosition = (advance: boolean) => {
-    const newValue = advance ? this.railPosition - 1 : this.railPosition + 1
-    if(newValue <= 0 && newValue > -9) this.railPosition = newValue
-    console.log("Posicionista:", this.railPosition)
+    const newValue = advance ? this.railPosition - 1 : this.railPosition + 1;
+    if (newValue <= 0 && newValue > -9) this.railPosition = newValue;
+    console.log('Posicionista:', this.railPosition);
 
-    console.log(this.userData.sex)
-  }
+    console.log(this.userData.sex);
+  };
 
   public test = () => {
-    console.log("FOIS 2!")
-  }
-
+    console.log('FOIS 2!', this.userData);
+  };
 }
