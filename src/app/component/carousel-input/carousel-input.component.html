@@ -97,7 +97,7 @@
             type="radio"
             title="Sexo masculino."
             name="sex"
-            value="male"
+            [ngValue]="UserDataSex.MALE"
             [disabled]="!(railPosition*-1 === 5)"
             [(ngModel)]="userData.sex"
           > Masculino
@@ -107,7 +107,7 @@
             type="radio"
             title="Sexo feminino."
             name="sex"
-            value="female"
+            [ngValue]="UserDataSex.FEMALE"
             [disabled]="!(railPosition*-1 === 5)"
             [(ngModel)]="userData.sex"
           > Feminino
@@ -123,7 +123,7 @@
             type="radio"
             title="Hipertrofia."
             name="goal"
-            value="hypertrophy"
+            [ngValue]="UserDataActivity.HYPERTROPHY"
             [disabled]="!(railPosition*-1 === 6)"
             [(ngModel)]="userData.goal"
           > Hipertrofia
@@ -133,7 +133,7 @@
             type="radio"
             title="Emagrecimento."
             name="goal"
-            value="loseweight"
+            [ngValue]="UserDataActivity.LOSEWEIGHT"
             [disabled]="!(railPosition*-1 === 6)"
             [(ngModel)]="userData.goal"
           > Emagrecimento

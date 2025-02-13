@@ -18,6 +18,8 @@ import Result from '../../services/result';
 })
 export class CarouselInputComponent {
   public UserDataActivity = UserDataActivity;
+  public UserDataSex = UserDataSex;
+  public UserDataGoal = UserDataGoal;
 
   public railPosition: number = 0;
 
@@ -27,7 +29,7 @@ export class CarouselInputComponent {
     age: 0, // Ver isso aqui
     activity: 1,
     sex: UserDataSex.MALE,
-    goal: UserDataGoal.HIPERTROPHY,
+    goal: UserDataGoal.HYPERTROPHY,
   };
 
   public errorMessage: string = '';
