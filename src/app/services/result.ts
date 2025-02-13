@@ -122,7 +122,9 @@ export default function Result({
     goal,
   };
 
-  return goal === UserDataGoal.HIPERTROPHY
+  console.log('userDataHandled', userDataHandled);
+
+  return goal === UserDataGoal.HYPERTROPHY
     ? Hipertrophy(userDataHandled)
     : Slimming(userDataHandled);
 }

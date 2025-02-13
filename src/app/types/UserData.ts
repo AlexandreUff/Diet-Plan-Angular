@@ -12,7 +12,7 @@ export enum UserDataSex {
 }
 
 export enum UserDataGoal {
-  HIPERTROPHY = 'hypertrophy',
+  HYPERTROPHY = 'hypertrophy',
   LOSEWEIGHT = 'loseweight',
 }
 
