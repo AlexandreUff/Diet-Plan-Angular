@@ -16,7 +16,8 @@
       <div class="input-content">
         <label>
           <input
-            type="text"
+            type="number"
+            min="0"
             placeholder="Ex.: 75.5 kg"
             title="Digite aqui seu peso em quilogramas."
             [disabled]="!(railPosition*-1 === 1)"
@@ -32,7 +33,8 @@
       <div class="input-content">
         <label>
           <input
-            type="text"
+            type="number"
+            min="0"
             placeholder="Ex.: 185 cm"
             title="Digite aqui seu peso em quilogramas."
             [disabled]="!(railPosition*-1 === 2)"
@@ -48,7 +50,8 @@
       <div class="input-content">
         <label>
           <input
-            type="text"
+            type="number"
+            min="0"
             placeholder="Ex.: 25 anos"
             title="Digite aqui seu peso em quilogramas."
             [disabled]="!(railPosition*-1 === 3)"
@@ -145,7 +148,7 @@
         <button
           title="Concluído"
           [disabled]="!(railPosition*-1 === 7)"
-          (click)="test()"
+          (click)="done()"
         >
           ✓ CONCLUÍDO
         </button>
