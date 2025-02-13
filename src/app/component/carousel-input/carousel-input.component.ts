@@ -1,23 +1,7 @@
 import { CommonModule, NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
-enum Activity {
-  SEDENTARY = 1,
-  SLIGHTLY = 2,
-  MODERATELY = 3,
-  HIGHLY = 4,
-  EXTREMELY = 5,
-}
-
-interface UserDataType {
-  weight?: number;
-  height?: number;
-  age?: number;
-  activity?: Activity;
-  sex?: 'male' | 'female';
-  goal?: 'hypertrophy' | 'loseweight';
-}
+import { UserDataType } from '../../types/UserData';
 
 @Component({
   selector: 'app-carousel-input',
@@ -30,9 +14,9 @@ export class CarouselInputComponent {
   public railPosition: number = 0;
 
   public userData: UserDataType = {
-    weight: undefined,
-    height: undefined,
-    age: undefined,
+    weight: 0,
+    height: 0,
+    age: 0,
     activity: 1,
     sex: 'male',
     goal: 'hypertrophy',
