@@ -1,4 +1,4 @@
-export enum Activity {
+export enum UserDataActivity {
   SEDENTARY = 1,
   SLIGHTLY = 2,
   MODERATELY = 3,
@@ -6,11 +6,21 @@ export enum Activity {
   EXTREMELY = 5,
 }
 
+export enum UserDataSex {
+  MALE = 'male',
+  FEMALE = 'female',
+}
+
+export enum UserDataGoal {
+  HIPERTROPHY = 'hypertrophy',
+  LOSEWEIGHT = 'loseweight',
+}
+
 export interface UserDataType {
   weight: number;
   height: number;
   age: number;
-  activity: Activity;
-  sex: 'male' | 'female';
-  goal: 'hypertrophy' | 'loseweight';
+  activity: UserDataActivity;
+  sex: UserDataSex;
+  goal: UserDataGoal;
 }

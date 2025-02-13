@@ -1,7 +1,7 @@
 import { CommonModule, NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { UserDataType } from '../../types/UserData';
+import { UserDataGoal, UserDataSex, UserDataType } from '../../types/UserData';
 
 @Component({
   selector: 'app-carousel-input',
@@ -14,12 +14,12 @@ export class CarouselInputComponent {
   public railPosition: number = 0;
 
   public userData: UserDataType = {
-    weight: 0,
-    height: 0,
-    age: 0,
+    weight: 0, // Ver isso aqui
+    height: 0, // Ver isso aqui
+    age: 0, // Ver isso aqui
     activity: 1,
-    sex: 'male',
-    goal: 'hypertrophy',
+    sex: UserDataSex.MALE,
+    goal: UserDataGoal.HIPERTROPHY,
   };
 
   public errorMessage: string = '';
