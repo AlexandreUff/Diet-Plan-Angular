@@ -152,6 +152,9 @@
         >
           ✓ CONCLUÍDO
         </button>
+        <p *ngIf="errorMessage && railPosition < -6" class="error-message">
+          {{errorMessage}}
+        </p>
       </div>
     </div>
 

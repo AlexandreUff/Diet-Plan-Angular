@@ -38,7 +38,10 @@ export class CarouselInputComponent {
     goal: 'hypertrophy',
   };
 
+  public errorMessage: string = '';
+
   public changeRailPosition = (advance: boolean) => {
+    this.errorMessage = '';
     const newValue = advance ? this.railPosition - 1 : this.railPosition + 1;
     if (newValue <= 0 && newValue > -9) this.railPosition = newValue;
     console.log('Posicionista:', this.railPosition);
@@ -49,11 +52,10 @@ export class CarouselInputComponent {
   public done = () => {
     console.log('FOIS 2!', this.userData);
 
-    let errorMessage = '';
     const fieldsMissing: string[] = [];
 
     if (!this.userData.weight || !this.userData.height || !this.userData.age) {
-      errorMessage = 'Falta(m) completar o(s) campo(s) de';
+      this.errorMessage = 'Falta(m) completar o(s) campo(s) de';
 
       if (!this.userData.weight) fieldsMissing.push('peso');
       if (!this.userData.height) fieldsMissing.push('altura');
@@ -61,13 +63,11 @@ export class CarouselInputComponent {
 
       fieldsMissing.forEach((field, i) => {
         if (fieldsMissing.length - 1 === i) {
-          errorMessage += ` ${field}.`;
+          this.errorMessage += ` ${field}.`;
         } else {
-          errorMessage += ` ${field},`;
+          this.errorMessage += ` ${field},`;
         }
       });
-
-      console.log(errorMessage);
     }
   };
 }
