@@ -46,7 +46,28 @@ export class CarouselInputComponent {
     console.log(this.userData.sex);
   };
 
-  public test = () => {
+  public done = () => {
     console.log('FOIS 2!', this.userData);
+
+    let errorMessage = '';
+    const fieldsMissing: string[] = [];
+
+    if (!this.userData.weight || !this.userData.height || !this.userData.age) {
+      errorMessage = 'Falta(m) completar o(s) campo(s) de';
+
+      if (!this.userData.weight) fieldsMissing.push('peso');
+      if (!this.userData.height) fieldsMissing.push('altura');
+      if (!this.userData.age) fieldsMissing.push('idade');
+
+      fieldsMissing.forEach((field, i) => {
+        if (fieldsMissing.length - 1 === i) {
+          errorMessage += ` ${field}.`;
+        } else {
+          errorMessage += ` ${field},`;
+        }
+      });
+
+      console.log(errorMessage);
+    }
   };
 }
