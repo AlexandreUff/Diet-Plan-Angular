@@ -9,6 +9,12 @@ import {
 } from '../../types/UserData';
 import Result from '../../services/result';
 
+type UserDataInput = Omit<UserDataType, 'weight' | 'height' | 'age'> & {
+  weight?: number;
+  height?: number;
+  age?: number;
+};
+
 @Component({
   selector: 'app-carousel-input',
   standalone: true,
@@ -23,11 +29,11 @@ export class CarouselInputComponent {
 
   public railPosition: number = 0;
 
-  public userData: UserDataType = {
-    weight: 0, // Ver isso aqui
-    height: 0, // Ver isso aqui
-    age: 0, // Ver isso aqui
-    activity: 1,
+  public userData: UserDataInput = {
+    weight: undefined,
+    height: undefined,
+    age: undefined,
+    activity: UserDataActivity.SEDENTARY,
     sex: UserDataSex.MALE,
     goal: UserDataGoal.HYPERTROPHY,
   };
@@ -66,6 +72,6 @@ export class CarouselInputComponent {
       return;
     }
 
-    console.log(Result(this.userData));
+    console.log(Result(this.userData as UserDataType));
   };
 }
