@@ -55,7 +55,7 @@ export class CarouselInputComponent {
     const fieldsMissing: string[] = [];
 
     if (!this.userData.weight || !this.userData.height || !this.userData.age) {
-      this.errorMessage = 'Falta(m) completar o(s) campo(s) de';
+      this.errorMessage = 'Falta completar o(s) campo(s) de';
 
       if (!this.userData.weight) fieldsMissing.push('peso');
       if (!this.userData.height) fieldsMissing.push('altura');
