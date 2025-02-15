@@ -1,1 +1,12 @@
-<p>result works!</p>
+<div class="area-result">
+  <div *ngIf="nonFilledUserDatas">
+    Por condicionais para exibir resultados
+  </div>
+  <h2>Resultado:</h2>
+  <section class="metabolic-result-content">
+
+  </section>
+  <section *ngIf="nonFilledUserDatas" class="macronutrients-result-content">
+    {{userData.weight}}kg
+  </section>
+</div>
