@@ -1,6 +1,7 @@
 import { CommonModule, NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import {
   UserDataActivity,
   UserDataGoal,
@@ -23,6 +24,8 @@ type UserDataInput = Omit<UserDataType, 'weight' | 'height' | 'age'> & {
   styleUrl: './carousel-input.component.scss',
 })
 export class CarouselInputComponent {
+  constructor(private router: Router) {}
+
   public UserDataActivity = UserDataActivity;
   public UserDataSex = UserDataSex;
   public UserDataGoal = UserDataGoal;
@@ -72,6 +75,7 @@ export class CarouselInputComponent {
       return;
     }
 
-    console.log(Result(this.userData as UserDataType));
+    this.router.navigate(['/result', { ...this.userData }]);
+    // console.log(Result(this.userData as UserDataType)); NÃO FICARÁ AQUI
   };
 }
