@@ -1,12 +1,16 @@
 <div class="area-result">
-  <div *ngIf="nonFilledUserDatas">
-    Por condicionais para exibir resultados
-  </div>
-  <h2>Resultado:</h2>
-  <section class="metabolic-result-content">
-
-  </section>
-  <section *ngIf="nonFilledUserDatas" class="macronutrients-result-content">
-    {{userData.weight}}kg
-  </section>
+  <ng-container *ngIf="nonFilledUserDatas">
+    <h2>Resultado:</h2>
+    <section *ngIf="nonFilledUserDatas" class="macronutrients-result-content">
+      <div class="macro-content">
+        {{userData.weight}}kg
+      </div>
+    </section>
+    <section class="metabolic-result-content">
+      Teste
+    </section>
+  </ng-container>
+  <ng-container *ngIf="!nonFilledUserDatas"> <!-- Estilizar corretamente -->
+    Há dados incompletos para apuração dos resultados.
+  </ng-container>
 </div>
