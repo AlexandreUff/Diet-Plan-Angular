@@ -1,14 +1,10 @@
+import { ResultMacroNutrientsVariation } from '../types/Result';
 import {
   UserDataActivity,
   UserDataGoal,
   UserDataSex,
   UserDataType,
 } from '../types/UserData';
-
-interface MacroNutrientsVariation {
-  min: number;
-  max: number;
-}
 
 const getCaloricExpenditure = (data: UserDataType) => {
   const male = 66 + 13.7 * data.weight + 5 * data.height - 6.8 * data.age;
@@ -47,7 +43,7 @@ const Hipertrophy = (data: UserDataType) => {
 
   const { metabolicRate, caloricExpenditure } = getCaloricExpenditure(data);
 
-  const proteins: MacroNutrientsVariation = {
+  const proteins: ResultMacroNutrientsVariation = {
     min: Math.round(data.weight * 1.6),
     max: Math.round(data.weight * 2.2),
   };
@@ -58,7 +54,7 @@ const Hipertrophy = (data: UserDataType) => {
     return Math.round((caloricExpenditure - (proteins * 4 + fat * 9)) / 4);
   };
 
-  const carbo: MacroNutrientsVariation = {
+  const carbo: ResultMacroNutrientsVariation = {
     min: basalCarboCalculation(proteins.max),
     max: basalCarboCalculation(proteins.min),
   };
