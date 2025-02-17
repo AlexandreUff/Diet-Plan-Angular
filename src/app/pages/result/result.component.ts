@@ -32,25 +32,10 @@ export class ResultComponent {
     this.userData.sex &&
     this.userData.weight;
 
+  public UserResult: UserResult = Result(this.userData as UserDataType);
+
   public showResult = () => {
-    //console.log('RESULTISTA', Result(this.userData as UserDataType));
-
-    const {
-      caloricExpenditure,
-      carbo,
-      fat,
-      metabolicRate,
-      proteins,
-    }: UserResult = Result(this.userData as UserDataType);
-
-    console.log(
-      'Resulteiro',
-      caloricExpenditure,
-      carbo,
-      fat,
-      metabolicRate,
-      proteins
-    );
+    console.log('USER-RESULTO', this.UserResult);
   };
 
   ngOnInit() {
