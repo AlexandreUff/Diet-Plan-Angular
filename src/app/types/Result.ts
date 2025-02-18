@@ -5,8 +5,8 @@ export interface ResultMacroNutrientsVariation {
 
 export interface UserResult {
   caloricExpenditure: number;
-  carbo: ResultMacroNutrientsVariation | number;
+  carbo: ResultMacroNutrientsVariation;
   fat: number;
   metabolicRate: number;
-  proteins: ResultMacroNutrientsVariation | number;
+  proteins: ResultMacroNutrientsVariation;
 }
