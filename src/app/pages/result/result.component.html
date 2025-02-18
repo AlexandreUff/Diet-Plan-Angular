@@ -1,13 +1,84 @@
 <div class="area-result">
   <ng-container *ngIf="isFilledUserDatas; else noUserData">
-    <h2>Resultado:</h2>
+    <h2>Result:</h2>
     <section class="macronutrients-result-content">
       <div class="macro-content">
-        {{UserResult.carbo.min}}kg+
+        <p>
+          🍗🥩🥛
+        </p>
+        <ng-container *ngIf="UserResult.proteins.min === UserResult.proteins.max; else showProteinsRange">
+          <p>
+            {{UserResult.proteins.min}}g
+          </p>
+        </ng-container>
+        <ng-template #showProteinsRange>
+          <p>
+            {{UserResult.proteins.min}}g to {{UserResult.proteins.max}}g
+          </p>
+        </ng-template>
+        <h3>Proteins</h3>
+      </div>
+      <div class="macro-content">
+        <p>
+          🍠🍌🍞
+        </p>
+        <ng-container *ngIf="UserResult.carbo.min === UserResult.carbo.max; else showCarbosRange">
+          <p>
+            {{UserResult.carbo.min}}g
+          </p>
+        </ng-container>
+        <ng-template #showCarbosRange>
+          <p>
+            {{UserResult.carbo.min}}g to {{UserResult.carbo.max}}g
+          </p>
+        </ng-template>
+        <h3>Carbohydrates</h3>
+      </div>
+      <div class="macro-content">
+        <p>
+          🥓🥜🧈
+        </p>
+        <p>
+          {{UserResult.fat}}g
+        </p>
+        <h3>Fat</h3>
       </div>
     </section>
-    <section class="metabolic-result-content">
-      Teste
+    <!-- <section class="metabolic-result-content">
+      <div class="metabolic-content">
+        {{UserResult.metabolicRate}}
+      </div>
+      <div class="metabolic-content">
+        {{UserResult.caloricExpenditure}}
+      </div>
+    </section> -->
+    <section class="explanation-area-result">
+      <p>
+        Com uma taxa de metabolismo basal de {{UserResult.metabolicRate}}/dia e um gasto calórico de {{UserResult.caloricExpenditure}}/dia
+        em virtude de se fazer de {{userData.activity}} a {{userData.activity}} exercícios durante a semana, o resultado acima
+        apresenta o consumo ideal aproximado dos três principais macronutrientes que deve ser feitos a cada dia: proteínas,
+        carboidratos e gorduras.
+      </p>
+      <p>
+        A taxa de metabolsimo basal é aquela a qual o seu organismo gasta ao dia apenas para manter o funcionamento do seu corpo
+        independente de qualquer atividade física.
+      </p>
+      <!-- Variar se for emagrecimento -->
+       <div class="warning-area">
+         <h4>Atenção!</h4>
+         <p>
+           O consumo entre as proteínas e carboidratos, como apresentado, variam entre um mínimo e um máximo de consumo diário.
+           No entando, deve ser feito um consumo proporcional entre essas duas de modo que caso consuma {{UserResult.proteins.min}}g de
+           proteína (valor mínimo de proteína), deve-se consumir {{UserResult.carbo.max}}g de carboidrato (valor máximo de carboidrato).
+           Caso consuma {{UserResult.proteins.max}}g de proteína (valor máximo de proteína), deve-se consumir
+           {{UserResult.carbo.min}}g de carboidrato (valor mínimo de carboidrato).
+         </p>
+         <p>
+           Ou seja, para cada grama de caboidrato consumido (dentro do mínimo e máximo dado), reduza um de proteína e vice-versa.
+           Assim, por exemplo, se você consumir {{UserResult.proteins.min + 24}}g de proteínas, que é um valor
+           médio, você deverá consumir {{UserResult.carbo.min + 24}}g de carboidratos.
+         </p>
+       </div>
     </section>
   </ng-container>
   <ng-template #noUserData> <!-- Estilizar corretamente -->

@@ -9,5 +9,58 @@
     backdrop-filter: blur(5px);
     width: 80%;
     padding: 16px;
+    border-radius: 8px;
+    color: #FFF;
+    text-shadow: 0px 1px 4px #000000c4;
+    font-family: "Roboto Condensed", sans-serif;
+
+    .macronutrients-result-content {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 8px;
+
+      .macro-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        flex-direction: column;
+
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+        padding: 8px;
+        width: 140px;
+        height: 100px;
+        text-align: center;
+        border-radius: 8px;
+      }
+    }
+
+    .metabolic-result-content, .explanation-area-result {
+      margin-top: 16px;
+
+      p {
+        margin-top: 16px;
+        text-indent: 24px;
+      }
+
+      .warning-area {
+        background-color: #ff636321;
+        margin-top: 16px;
+        padding: 16px;
+
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+
+        h4 {
+          text-align: center;
+          margin-bottom: 8px;
+        }
+
+        p {
+          margin-top: 0px;
+        }
+      }
+    }
   }
 }
