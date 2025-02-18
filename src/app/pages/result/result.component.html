@@ -54,14 +54,15 @@
     </section> -->
     <section class="explanation-area-result">
       <p>
-        Com uma taxa de metabolismo basal de {{UserResult.metabolicRate}}/dia e um gasto calórico de {{UserResult.caloricExpenditure}}/dia
-        em virtude de se fazer de {{userData.activity}} a {{userData.activity}} exercícios durante a semana, o resultado acima
+        Com uma taxa de <span class="high-light">metabolismo basal de {{UserResult.metabolicRate}} kcal/dia</span> e um <span class="high-light">gasto calórico de {{UserResult.caloricExpenditure}} kcal/dia</span>
+        em virtude de se fazer de {{ActivedFrequenceTextShow(userData.activity)}} por semana, o resultado acima
         apresenta o consumo ideal aproximado dos três principais macronutrientes que deve ser feitos a cada dia: proteínas,
         carboidratos e gorduras.
       </p>
       <p>
-        A taxa de metabolsimo basal é aquela a qual o seu organismo gasta ao dia apenas para manter o funcionamento do seu corpo
-        independente de qualquer atividade física.
+        A taxa de <span class="high-light">metabolsimo basal</span> é aquela a qual o seu organismo gasta ao dia apenas para manter o funcionamento do seu corpo
+        independente de qualquer atividade física enquanto que o <span class="high-light">gasto calórico</span> é o que se leva em conta somando
+        a(s) atividade(s) física(s) feitas durante a semana.
       </p>
       <!-- Variar se for emagrecimento -->
        <div class="warning-area">

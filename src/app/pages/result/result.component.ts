@@ -4,6 +4,7 @@ import { UserDataType } from '../../types/UserData';
 import { CommonModule } from '@angular/common';
 import Result from '../../services/result';
 import { UserResult } from '../../types/Result';
+import { ActivedFrequenceTextShow } from '../../services/activedFrequence';
 
 @Component({
   selector: 'app-result',
@@ -33,6 +34,8 @@ export class ResultComponent {
     this.userData.weight;
 
   public UserResult: UserResult = Result(this.userData as UserDataType);
+
+  public ActivedFrequenceTextShow = ActivedFrequenceTextShow;
 
   public showResult = () => {
     console.log('USER-RESULTO', this.UserResult);
