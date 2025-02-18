@@ -55,7 +55,7 @@
     <section class="explanation-area-result">
       <p>
         Com uma taxa de <span class="high-light">metabolismo basal de {{UserResult.metabolicRate}} kcal/dia</span> e um <span class="high-light">gasto calórico de {{UserResult.caloricExpenditure}} kcal/dia</span>
-        em virtude de se fazer de {{ActivedFrequenceTextShow(userData.activity)}} por semana, o resultado acima
+        em virtude de se fazer de <span class="high-light">{{ActivedFrequenceTextShow(userData.activity)}} por semana</span>, o resultado acima
         apresenta o consumo ideal aproximado dos três principais macronutrientes que deve ser feitos a cada dia: proteínas,
         carboidratos e gorduras.
       </p>
@@ -69,15 +69,15 @@
          <h4>Atenção!</h4>
          <p>
            O consumo entre as proteínas e carboidratos, como apresentado, variam entre um mínimo e um máximo de consumo diário.
-           No entando, deve ser feito um consumo proporcional entre essas duas de modo que caso consuma {{UserResult.proteins.min}}g de
-           proteína (valor mínimo de proteína), deve-se consumir {{UserResult.carbo.max}}g de carboidrato (valor máximo de carboidrato).
-           Caso consuma {{UserResult.proteins.max}}g de proteína (valor máximo de proteína), deve-se consumir
-           {{UserResult.carbo.min}}g de carboidrato (valor mínimo de carboidrato).
+           No entando, deve ser feito um consumo proporcional entre essas duas de modo que caso consuma <span class="high-light">{{UserResult.proteins.min}}g de
+           proteína</span> (valor mínimo de proteína), deve-se consumir <span class="high-light">{{UserResult.carbo.max}}g de carboidrato</span> (valor máximo de carboidrato).
+           Caso consuma <span class="high-light">{{UserResult.proteins.max}}g de proteína</span> (valor máximo de proteína), deve-se consumir
+           <span class="high-light">{{UserResult.carbo.min}}g de carboidrato</span> (valor mínimo de carboidrato).
          </p>
          <p>
            Ou seja, para cada grama de caboidrato consumido (dentro do mínimo e máximo dado), reduza um de proteína e vice-versa.
-           Assim, por exemplo, se você consumir {{UserResult.proteins.min + 24}}g de proteínas, que é um valor
-           médio, você deverá consumir {{UserResult.carbo.min + 24}}g de carboidratos.
+           Assim, por exemplo, se você consumir <span class="high-light">{{UserResult.proteins.min + 24}}g de proteínas</span>, que é um valor
+           médio de proteínas, você deverá consumir <span class="high-light">{{UserResult.carbo.min + 24}}g de carboidratos</span>, que é um valor médio de carboidratos.
          </p>
        </div>
     </section>
