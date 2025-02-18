@@ -24,7 +24,7 @@ export class ResultComponent {
     goal: this.activedRoute.snapshot.params['goal'],
   };
 
-  public nonFilledUserDatas =
+  public isFilledUserDatas =
     this.userData.activity &&
     this.userData.age &&
     this.userData.goal &&

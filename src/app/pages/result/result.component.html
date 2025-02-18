@@ -1,16 +1,16 @@
 <div class="area-result">
-  <ng-container *ngIf="nonFilledUserDatas">
+  <ng-container *ngIf="isFilledUserDatas; else noUserData">
     <h2>Resultado:</h2>
-    <section *ngIf="nonFilledUserDatas" class="macronutrients-result-content">
+    <section class="macronutrients-result-content">
       <div class="macro-content">
-        {{UserResult.carbo}}kg
+        {{UserResult.carbo.min}}kg+
       </div>
     </section>
     <section class="metabolic-result-content">
       Teste
     </section>
   </ng-container>
-  <ng-container *ngIf="!nonFilledUserDatas"> <!-- Estilizar corretamente -->
+  <ng-template #noUserData> <!-- Estilizar corretamente -->
     Há dados incompletos para apuração dos resultados.
-  </ng-container>
+  </ng-template>
 </div>
