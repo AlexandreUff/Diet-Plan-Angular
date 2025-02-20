@@ -49,6 +49,7 @@
         Com uma taxa de <span class="high-light">metabolismo basal de {{UserResult.metabolicRate}} kcal/dia</span> e um <span class="high-light">gasto calórico de {{UserResult.caloricExpenditure}} kcal/dia</span>
         em virtude de se fazer de <span class="high-light">{{ActivedFrequenceTextShow(userData.activity)}} por semana</span>, o resultado acima
         apresenta o consumo ideal aproximado dos três principais macronutrientes que deve ser feitos a cada dia com foco maior em {{ userData.goal === userDataGoal.HYPERTROPHY ? "carboidratos" : "proteínas e carboidratos" }}.
+        Levando em conta que para cada grama de proteína tem 4 kcal, de carboidrato tem também 4 kcal e gordura têm 9 kcal em sua composição.
       </p>
       <p>
         A taxa de <span class="high-light">metabolsimo basal</span> é aquela a qual o seu organismo gasta ao dia apenas para manter o funcionamento do seu corpo
@@ -75,9 +76,10 @@
        </ng-container>
 
        <p>
-         A cada 15 dias, você deve refazer esse cálculo para atualizar seu consumo de macronutrientes conforme seu peso mudar. Este resultado não substitui o trabalho de
-         um nutricionista. Portanto sempre consulte um para que ele orientar da maneira mais adequada
-         sobre quais alimentos são ideais ou mais indicados para sua dieta.
+         A cada 15 dias, você deve <span class="high-light">{{ userData.goal === userDataGoal.HYPERTROPHY ? "incluir" : "diminuir" }} algo entre 200 a 300 kcal/dia</span>
+         {{ userData.goal === userDataGoal.HYPERTROPHY ? "na" : "da" }} sua dieta respeitando essas proporções de consumo dos macronutrientes e refazer esse cálculo para atualizar
+         seu consumo conforme seu peso {{ userData.goal === userDataGoal.HYPERTROPHY ? "aumentar" : "diminuir" }}. Este resultado não substitui o trabalho de um nutricionista.
+         Portanto sempre consulte um para que lhe oriente da maneira mais adequada sobre quais alimentos são ideais ou mais indicados para o seu objetivo em particular.
        </p>
       </div>
     </section>
