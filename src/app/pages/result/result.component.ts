@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { UserDataType } from '../../types/UserData';
+import { UserDataGoal, UserDataType } from '../../types/UserData';
 import { CommonModule } from '@angular/common';
 import Result from '../../services/result';
 import { UserResult } from '../../types/Result';
@@ -15,6 +15,8 @@ import { ActivedFrequenceTextShow } from '../../services/activedFrequence';
 })
 export class ResultComponent {
   constructor(private activedRoute: ActivatedRoute) {}
+
+  public userDataGoal = UserDataGoal;
 
   public userData: UserDataType = {
     weight: +this.activedRoute.snapshot.params['weight'],
