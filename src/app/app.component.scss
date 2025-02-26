@@ -1,10 +1,13 @@
 :host {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100%; //ver isso
+  width: 100%;
+  flex-grow: 1; //Ver isso
 
   background-image: url('../assets/images/pexels-victor-freitas-949126.jpg');
   background-size: 100%;
+  background-attachment: fixed;
 
   header {
     display: flex;
