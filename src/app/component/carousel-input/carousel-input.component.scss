@@ -129,6 +129,10 @@
                 background-color: var(--secondColor);
               }
             }
+
+            &:hover {
+              cursor: pointer;
+            }
           }
 
           &.column-direction{
