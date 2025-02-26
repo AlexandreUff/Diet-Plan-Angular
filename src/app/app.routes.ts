@@ -4,13 +4,13 @@ import { ResultComponent } from './pages/result/result.component';
 
 export const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: HomeComponent,
-    title: "Lar",
+    title: 'Diet Plan',
   },
   {
-    path: "result",
+    path: 'result',
     component: ResultComponent,
-    title: "Resultado",
-  }
+    title: 'Diet Plan - Resultado',
+  },
 ];
