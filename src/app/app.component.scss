@@ -63,6 +63,13 @@
   }
 }
 
+@media(max-width: 1256px){
+  :host {
+    background-size: 1400px;
+    background-position: center;
+  }
+}
+
 @media(max-width: 1115px){
   :host {
     header {
