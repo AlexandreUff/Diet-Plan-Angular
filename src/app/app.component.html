@@ -340,20 +340,21 @@
 <footer>
   <ul>
     <li>
-      <span [innerHTML]="linkedin"></span>
+      <a [href]='linkedinURL' target="_blank" title="LinkedIn">
+        <span [innerHTML]="linkedin"></span>
+      </a>
     </li>
     <li>
-      <span [innerHTML]="github"></span>
-    </li>
-    <li>
-      <span [innerHTML]="instagram"></span>
+      <a [href]='githubURL' target="_blank" title="GitHub">
+        <span [innerHTML]="github"></span>
+      </a>
     </li>
   </ul>
   <p>
     <small>Créditos Imagens: "Jão"</small>
   </p>
   <p>
-    <small>© 2024 - Alexandre Magno Dias</small>
+    <small>© {{ShowCurrentYear("2025")}} Alexandre Magno Dias</small>
   </p>
 </footer>
 
