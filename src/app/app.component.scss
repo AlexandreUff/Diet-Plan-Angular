@@ -5,7 +5,7 @@
   width: 100%;
   flex-grow: 1; //Ver isso
 
-  background-image: url('../assets/images/pexels-victor-freitas-949126.jpg');
+  background-image: url('../assets/images/background-imagem-dk.avif');
   background-size: 100%;
   background-attachment: fixed;
 
@@ -87,6 +87,12 @@
       justify-content: center;
 
     }
+  }
+}
+
+@media(max-width: 700px){
+  :host {
+    background-image: url('../assets/images/background-imagem-mb.avif');
   }
 }
 
