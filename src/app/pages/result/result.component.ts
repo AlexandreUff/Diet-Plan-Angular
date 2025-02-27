@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserDataGoal, UserDataType } from '../../types/UserData';
 import { CommonModule } from '@angular/common';
@@ -38,12 +38,4 @@ export class ResultComponent {
   public UserResult: UserResult = Result(this.userData as UserDataType);
 
   public ActivedFrequenceTextShow = ActivedFrequenceTextShow;
-
-  public showResult = () => {
-    console.log('USER-RESULTO', this.UserResult);
-  };
-
-  ngOnInit() {
-    this.showResult();
-  }
 }

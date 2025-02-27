@@ -39,8 +39,6 @@ const getCaloricExpenditure = (data: UserDataType) => {
 };
 
 const Hipertrophy = (data: UserDataType) => {
-  console.log('Hipertrophy', data);
-
   const { metabolicRate, caloricExpenditure } = getCaloricExpenditure(data);
 
   const proteins: ResultMacroNutrientsVariation = {
@@ -59,12 +57,6 @@ const Hipertrophy = (data: UserDataType) => {
     max: basalCarboCalculation(proteins.min),
   };
 
-  console.log('TMB', metabolicRate);
-  console.log('GASTO', caloricExpenditure);
-  console.log('PRoteínas:', proteins);
-  console.log('Gorduras:', fat);
-  console.log('Carbo:', carbo);
-
   return {
     metabolicRate,
     caloricExpenditure,
@@ -75,8 +67,6 @@ const Hipertrophy = (data: UserDataType) => {
 };
 
 const Slimming = (data: UserDataType) => {
-  console.log('Emagrecimento', data);
-
   const { metabolicRate, caloricExpenditure } = getCaloricExpenditure(data);
 
   const macroNutrientsCalc = (percentage: number, calories: number) =>
@@ -93,10 +83,6 @@ const Slimming = (data: UserDataType) => {
   };
 
   const fat = macroNutrientsCalc(20, 9);
-
-  console.log('p,c,f:', proteins, carbo, fat);
-
-  console.log('TMB', getCaloricExpenditure(data));
 
   return {
     metabolicRate,

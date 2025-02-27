@@ -47,14 +47,9 @@ export class CarouselInputComponent {
     this.errorMessage = '';
     const newValue = advance ? this.railPosition - 1 : this.railPosition + 1;
     if (newValue <= 0 && newValue > -9) this.railPosition = newValue;
-    console.log('Posicionista:', this.railPosition);
-
-    console.log(this.userData.sex);
   };
 
   public done = () => {
-    console.log('userData: ', this.userData);
-
     const fieldsMissing: string[] = [];
 
     if (!this.userData.weight || !this.userData.height || !this.userData.age) {
@@ -76,6 +71,5 @@ export class CarouselInputComponent {
     }
 
     this.router.navigate(['/result', { ...this.userData }]);
-    // console.log(Result(this.userData as UserDataType)); NÃO FICARÁ AQUI
   };
 }
