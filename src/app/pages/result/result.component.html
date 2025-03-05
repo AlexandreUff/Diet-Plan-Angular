@@ -13,7 +13,7 @@
         </ng-container>
         <ng-template #showProteinsRange>
           <p>
-            {{UserResult.proteins.min}}g to {{UserResult.proteins.max}}g
+            {{UserResult.proteins.min}}g a {{UserResult.proteins.max}}g
           </p>
         </ng-template>
         <h3>Proteina</h3>
@@ -29,7 +29,7 @@
         </ng-container>
         <ng-template #showCarbosRange>
           <p>
-            {{UserResult.carbo.min}}g to {{UserResult.carbo.max}}g
+            {{UserResult.carbo.min}}g a {{UserResult.carbo.max}}g
           </p>
         </ng-template>
         <h3>Carboidrato</h3>
@@ -49,7 +49,7 @@
         Com uma taxa de <span class="high-light">metabolismo basal de {{UserResult.metabolicRate}} kcal/dia</span> e um <span class="high-light">gasto calórico de {{UserResult.caloricExpenditure}} kcal/dia</span>
         em virtude de se fazer de <span class="high-light">{{ActivedFrequenceTextShow(userData.activity)}} por semana</span>, o resultado acima
         apresenta o consumo ideal aproximado dos três principais macronutrientes que deve ser feitos a cada dia com foco maior em {{ userData.goal === userDataGoal.HYPERTROPHY ? "carboidratos" : "proteínas e carboidratos" }}.
-        Levando em conta que para cada grama de proteína tem 4 kcal, de carboidrato tem também 4 kcal e gordura têm 9 kcal em sua composição.
+        Levando em conta que para cada grama de proteína tem 4 kcal, de carboidrato tem também 4 kcal e gordura tem 9 kcal em sua composição.
       </p>
       <p>
         A taxa de <span class="high-light">metabolsimo basal</span> é aquela a qual o seu organismo gasta ao dia apenas para manter o funcionamento do seu corpo
