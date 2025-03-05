@@ -70,7 +70,7 @@ const Slimming = (data: UserDataType) => {
   const { metabolicRate, caloricExpenditure } = getCaloricExpenditure(data);
 
   const macroNutrientsCalc = (percentage: number, calories: number) =>
-    Math.round((caloricExpenditure * (percentage / 100)) / calories);
+    Math.round((metabolicRate * (percentage / 100)) / calories);
 
   const proteins: ResultMacroNutrientsVariation = {
     min: macroNutrientsCalc(40, 4),
