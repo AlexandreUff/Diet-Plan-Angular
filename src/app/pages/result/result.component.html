@@ -48,7 +48,7 @@
       <p>
         Com uma taxa de <span class="high-light">metabolismo basal de {{UserResult.metabolicRate}} kcal/dia</span> e um <span class="high-light">gasto calórico de {{UserResult.caloricExpenditure}} kcal/dia</span>
         em virtude de se fazer de <span class="high-light">{{ActivedFrequenceTextShow(userData.activity)}} por semana</span>, o resultado acima
-        apresenta o consumo ideal aproximado dos três principais macronutrientes que deve ser feitos a cada dia com foco maior em {{ userData.goal === userDataGoal.HYPERTROPHY ? "carboidratos" : "proteínas e carboidratos" }}.
+        apresenta o consumo ideal aproximado dos três principais macronutrientes que deve ser feitos a cada dia com foco maior em @if(userData.goal === userDataGoal.HYPERTROPHY){carboidratos}@else{proteínas e carboidratos}.
         Levando em conta que para cada grama de proteína tem 4 kcal, de carboidrato tem também 4 kcal e gordura tem 9 kcal em sua composição.
       </p>
       <p>
@@ -77,7 +77,7 @@
        </ng-container>
 
        <p>
-         A cada 15 dias, você deve refazer esse cálculo para atualizar seu consumo conforme seu peso {{ userData.goal === userDataGoal.HYPERTROPHY ? "for aumentando e incorporar mais 20% de cada macronutriente em sua dieta respeitando essas proporções de consumo dos mesmos" : "for diminuindo" }}. Procure fazer uma dieta com alimentos limpos e nutritivos
+         A cada 15 dias, você deve refazer esse cálculo para atualizar seu consumo conforme seu peso @if(userData.goal === userDataGoal.HYPERTROPHY){for aumentando e incorporar mais 20% de cada macronutriente em sua dieta respeitando essas proporções de consumo dos mesmos}@else{for diminuindo}. Procure fazer uma dieta com alimentos limpos e nutritivos
          e que também seja ricos em <span class="high-light">micronutrientes (vitaminas e sais minerais)</span>. O recomendado é ter no <span class="high-light">máximo 20%</span> de sua dieta livre para comer alimentos de sua preferência
          para que você possa se adaptar com mais facilidade à sua nova rotina caso seja iniciante. Este resultado acima não substitui o trabalho de um nutricionista.
          Portanto sempre consulte um para que lhe oriente da maneira mais adequada sobre quais alimentos são ideais ou mais indicados para o seu objetivo em particular.
