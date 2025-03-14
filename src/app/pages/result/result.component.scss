@@ -26,24 +26,6 @@
       justify-content: space-around;
       margin-top: 8px;
       gap: 8px;
-
-      .macro-content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        flex-direction: column;
-
-        background-color: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(5px);
-        padding: 8px;
-        width: 140px;
-        height: 100px;
-        text-align: center;
-        border-radius: 8px;
-
-        box-shadow: 0px 1px 16px #0000004b;
-      }
     }
 
     .explanation-area-result {

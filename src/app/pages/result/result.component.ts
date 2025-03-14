@@ -5,11 +5,12 @@ import { CommonModule } from '@angular/common';
 import Result from '../../services/result';
 import { UserResult } from '../../types/Result';
 import { ActivedFrequenceTextShow } from '../../services/activedFrequence';
+import { MacroContentComponent } from '../../component/macro-content/macro-content.component';
 
 @Component({
   selector: 'app-result',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MacroContentComponent],
   templateUrl: './result.component.html',
   styleUrl: './result.component.scss',
 })

@@ -2,47 +2,24 @@
   <ng-container *ngIf="isFilledUserDatas; else noUserData">
     <h2>Resultado:</h2>
     <section class="macronutrients-result-content">
-      <div class="macro-content">
-        <p>
-          🍗🥩🥛
-        </p>
-        <ng-container *ngIf="UserResult.proteins.min === UserResult.proteins.max; else showProteinsRange">
-          <p>
-            {{UserResult.proteins.min}}g
-          </p>
-        </ng-container>
-        <ng-template #showProteinsRange>
-          <p>
-            {{UserResult.proteins.min}}g a {{UserResult.proteins.max}}g
-          </p>
-        </ng-template>
-        <h3>Proteina</h3>
-      </div>
-      <div class="macro-content">
-        <p>
-          🍠🍌🍞
-        </p>
-        <ng-container *ngIf="UserResult.carbo.min === UserResult.carbo.max; else showCarbosRange">
-          <p>
-            {{UserResult.carbo.min}}g
-          </p>
-        </ng-container>
-        <ng-template #showCarbosRange>
-          <p>
-            {{UserResult.carbo.min}}g a {{UserResult.carbo.max}}g
-          </p>
-        </ng-template>
-        <h3>Carboidrato</h3>
-      </div>
-      <div class="macro-content">
-        <p>
-          🥓🥜🧈
-        </p>
-        <p>
-          {{UserResult.fat}}g
-        </p>
-        <h3>Gordura</h3>
-      </div>
+      <app-macro-content
+        macroEmojies="🍗🥩🥛"
+        macroresultMin={{UserResult.proteins.min}}
+        macroresultMax={{UserResult.proteins.max}}
+        macroName="Proteína"
+      />
+      <app-macro-content
+        macroEmojies="🍠🍌🍞"
+        macroresultMin={{UserResult.carbo.min}}
+        macroresultMax={{UserResult.carbo.max}}
+        macroName="Carboidrato"
+      />
+      <app-macro-content
+        macroEmojies="🥓🥜🧈"
+        macroresultMin={{UserResult.fat}}
+        macroresultMax={{UserResult.fat}}
+        macroName="Gordura"
+      />
     </section>
     <section class="explanation-area-result">
       <p>
